@@ -1,0 +1,198 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AccountAndRegionDiscovery",
+      "Effect": "Allow",
+      "Action": [
+        "sts:GetCallerIdentity",
+        "account:Get*",
+        "organizations:Describe*",
+        "organizations:List*",
+        "ec2:DescribeRegions",
+        "ec2:DescribeAvailabilityZones"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ScannerReadOnlyCommonAWSResources",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:Describe*",
+        "cloudwatch:Get*",
+        "cloudwatch:List*",
+
+        "logs:Describe*",
+        "logs:Get*",
+        "logs:List*",
+        "logs:FilterLogEvents",
+        "logs:StartQuery",
+        "logs:StopQuery",
+
+        "ec2:Describe*",
+        "autoscaling:Describe*",
+        "elasticloadbalancing:Describe*",
+
+        "rds:Describe*",
+        "rds:ListTagsForResource",
+
+        "eks:Describe*",
+        "eks:List*",
+        "eks:AccessKubernetesApi",
+
+        "ecs:Describe*",
+        "ecs:List*",
+
+        "lambda:Get*",
+        "lambda:List*",
+
+        "s3:GetAccountPublicAccessBlock",
+        "s3:GetBucket*",
+        "s3:GetEncryptionConfiguration",
+        "s3:GetLifecycleConfiguration",
+        "s3:GetReplicationConfiguration",
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
+
+        "iam:Get*",
+        "iam:List*",
+        "iam:GenerateCredentialReport",
+
+        "sns:Get*",
+        "sns:List*",
+        "sqs:Get*",
+        "sqs:List*",
+
+        "route53:Get*",
+        "route53:List*",
+        "cloudfront:Get*",
+        "cloudfront:List*",
+        "acm:DescribeCertificate",
+        "acm:GetCertificate",
+        "acm:ListCertificates",
+        "acm:ListTagsForCertificate",
+
+        "ce:Get*",
+        "ce:Describe*",
+        "ce:List*",
+        "budgets:Describe*",
+        "cur:Describe*",
+        "pricing:DescribeServices",
+        "pricing:GetAttributeValues",
+        "pricing:GetProducts",
+
+        "access-analyzer:Get*",
+        "access-analyzer:List*",
+        "config:Describe*",
+        "config:Get*",
+        "config:List*",
+        "guardduty:Get*",
+        "guardduty:List*",
+        "guardduty:Describe*",
+        "inspector2:Get*",
+        "inspector2:List*",
+        "inspector2:BatchGet*",
+        "securityhub:Get*",
+        "securityhub:List*",
+        "securityhub:Describe*",
+        "waf:Get*",
+        "waf:List*",
+        "wafv2:Get*",
+        "wafv2:List*",
+        "shield:Get*",
+        "shield:List*",
+        "shield:Describe*",
+
+        "secretsmanager:DescribeSecret",
+        "secretsmanager:ListSecrets",
+        "ssm:DescribeParameters",
+        "ssm:GetParameterHistory",
+        "ssm:ListTagsForResource",
+
+        "dynamodb:Describe*",
+        "dynamodb:List*",
+        "elasticache:Describe*",
+        "elasticache:List*",
+
+        "apigateway:GET",
+        "apigatewayv2:Get*",
+        "events:Describe*",
+        "events:List*",
+
+        "ecr:Describe*",
+        "ecr:GetLifecyclePolicy",
+        "ecr:GetRegistryPolicy",
+        "ecr:GetRepositoryPolicy",
+        "ecr:List*",
+
+        "codedeploy:Get*",
+        "codedeploy:List*",
+        "codedeploy:BatchGet*",
+
+        "cloudformation:Describe*",
+        "cloudformation:Get*",
+        "cloudformation:List*",
+
+        "resource-groups:Get*",
+        "resource-groups:List*",
+        "tag:Get*",
+        "resource-explorer-2:Get*",
+        "resource-explorer-2:List*",
+        "resource-explorer-2:Search",
+
+        "support:Describe*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchProjectSetupWritePermissions",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:PutDashboard",
+        "cloudwatch:DeleteDashboards",
+        "cloudwatch:PutMetricAlarm",
+        "cloudwatch:DeleteAlarms",
+        "cloudwatch:TagResource",
+        "cloudwatch:UntagResource",
+
+        "logs:PutRetentionPolicy",
+        "logs:DeleteRetentionPolicy",
+        "logs:TagResource",
+        "logs:UntagResource",
+
+        "sns:CreateTopic",
+        "sns:Subscribe",
+        "sns:Unsubscribe",
+        "sns:Publish",
+        "sns:SetTopicAttributes",
+        "sns:TagResource",
+        "sns:UntagResource"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "OptionalCloudWatchAgentSSMReadOnlyAndParameterWrite",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:DescribeInstanceInformation",
+        "ssm:DescribeAssociation*",
+        "ssm:ListAssociations",
+        "ssm:PutParameter"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DenySecretValueReads",
+      "Effect": "Deny",
+      "Action": [
+        "secretsmanager:GetSecretValue",
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:GetParametersByPath",
+        "kms:Decrypt",
+        "s3:GetObject"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

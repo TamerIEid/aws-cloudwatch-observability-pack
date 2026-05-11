@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f7f9fc"/>
+  <rect x="60" y="48" width="1160" height="624" rx="18" fill="#ffffff" stroke="#d6dde8"/>
+  <text x="92" y="96" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#122033">IAM Identity Center - Account assignment</text>
+  <rect x="92" y="150" width="320" height="96" rx="12" fill="#eef6ff" stroke="#9cc4ff"/>
+  <text x="122" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#122033">User or group</text>
+  <text x="122" y="222" font-family="Arial, sans-serif" font-size="20" fill="#44546a">Monitoring setup user</text>
+  <rect x="480" y="150" width="320" height="96" rx="12" fill="#eef6ff" stroke="#9cc4ff"/>
+  <text x="510" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#122033">AWS account</text>
+  <text x="510" y="222" font-family="Arial, sans-serif" font-size="20" fill="#44546a">Selected production account</text>
+  <rect x="868" y="150" width="320" height="96" rx="12" fill="#eef6ff" stroke="#9cc4ff"/>
+  <text x="898" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#122033">Permission set</text>
+  <text x="898" y="222" font-family="Arial, sans-serif" font-size="20" fill="#44546a">CloudWatch monitoring scope</text>
+  <path d="M412 198 H480" stroke="#1a73e8" stroke-width="4"/>
+  <path d="M800 198 H868" stroke="#1a73e8" stroke-width="4"/>
+  <text x="92" y="635" font-family="Arial, sans-serif" font-size="18" fill="#667085">Example screen - use this option if the company already manages AWS access through Identity Center.</text>
+</svg>

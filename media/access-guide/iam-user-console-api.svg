@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f7f9fc"/>
+  <rect x="60" y="48" width="1160" height="624" rx="18" fill="#ffffff" stroke="#d6dde8"/>
+  <text x="92" y="96" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#122033">IAM - Create user</text>
+  <rect x="92" y="138" width="500" height="58" rx="10" fill="#f0f7ff" stroke="#9cc4ff"/>
+  <text x="122" y="174" font-family="Arial, sans-serif" font-size="22" fill="#122033">User name: cloudwatch-monitoring-temp</text>
+  <rect x="92" y="230" width="28" height="28" rx="5" fill="#1a73e8"/>
+  <path d="M99 244 l7 7 l14 -17" fill="none" stroke="#fff" stroke-width="4"/>
+  <text x="140" y="252" font-family="Arial, sans-serif" font-size="22" fill="#122033">Enable AWS Management Console access</text>
+  <rect x="92" y="292" width="28" height="28" rx="5" fill="#1a73e8"/>
+  <path d="M99 306 l7 7 l14 -17" fill="none" stroke="#fff" stroke-width="4"/>
+  <text x="140" y="314" font-family="Arial, sans-serif" font-size="22" fill="#122033">Create CLI/API access key</text>
+  <rect x="92" y="354" width="28" height="28" rx="5" fill="#1a73e8"/>
+  <path d="M99 368 l7 7 l14 -17" fill="none" stroke="#fff" stroke-width="4"/>
+  <text x="140" y="376" font-family="Arial, sans-serif" font-size="22" fill="#122033">Attach CloudWatchMonitoringSetupLimitedPolicy</text>
+  <rect x="840" y="520" width="250" height="64" rx="12" fill="#ff9900"/>
+  <text x="910" y="561" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#111827">Create user</text>
+  <text x="92" y="635" font-family="Arial, sans-serif" font-size="18" fill="#667085">Example screen - console + API access for one temporary project user.</text>
+</svg>

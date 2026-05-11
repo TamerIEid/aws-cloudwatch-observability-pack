@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f7f9fc"/>
+  <rect x="60" y="48" width="1160" height="624" rx="18" fill="#ffffff" stroke="#d6dde8"/>
+  <text x="92" y="96" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#122033">IAM - Create role with External ID</text>
+  <rect x="92" y="148" width="520" height="72" rx="10" fill="#f0f7ff" stroke="#9cc4ff"/>
+  <text x="122" y="192" font-family="Arial, sans-serif" font-size="22" fill="#122033">Trusted entity: AWS account</text>
+  <rect x="92" y="250" width="520" height="72" rx="10" fill="#f0f7ff" stroke="#9cc4ff"/>
+  <text x="122" y="294" font-family="Arial, sans-serif" font-size="22" fill="#122033">Account ID: provided privately</text>
+  <rect x="92" y="352" width="520" height="72" rx="10" fill="#f0f7ff" stroke="#9cc4ff"/>
+  <text x="122" y="396" font-family="Arial, sans-serif" font-size="22" fill="#122033">External ID: unique project value</text>
+  <rect x="740" y="250" width="310" height="72" rx="10" fill="#ecfdf3" stroke="#75d19c"/>
+  <text x="780" y="294" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#067647">No password shared</text>
+  <rect x="740" y="352" width="310" height="72" rx="10" fill="#ecfdf3" stroke="#75d19c"/>
+  <text x="780" y="396" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#067647">No access key shared</text>
+  <text x="92" y="635" font-family="Arial, sans-serif" font-size="18" fill="#667085">Example screen - best option for technical teams that can create roles.</text>
+</svg>

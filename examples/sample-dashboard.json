@@ -1,0 +1,86 @@
+{
+  "widgets": [
+    {
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 2,
+      "properties": {
+        "markdown": "# Example Production Observability Dashboard\nSynthetic sample only. No real AWS account or client data."
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 2,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "region": "us-east-1",
+        "title": "EC2 CPU - Example Fleet",
+        "view": "timeSeries",
+        "stat": "Average",
+        "period": 300,
+        "metrics": [
+          [ "AWS/EC2", "CPUUtilization", "InstanceId", "i-0123456789example", { "label": "web-01 CPU %" } ],
+          [ ".", ".", ".", "i-0abcdef123example", { "label": "worker-01 CPU %" } ]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 2,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "region": "us-east-1",
+        "title": "ALB Health - Example",
+        "view": "timeSeries",
+        "stat": "Sum",
+        "period": 300,
+        "metrics": [
+          [ "AWS/ApplicationELB", "HTTPCode_Target_5XX_Count", "LoadBalancer", "app/example-alb/1234567890abcdef", { "label": "Target 5xx" } ],
+          [ ".", "HTTPCode_ELB_5XX_Count", ".", ".", { "label": "ALB 5xx" } ]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 8,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "region": "us-east-1",
+        "title": "RDS/Aurora - Example",
+        "view": "timeSeries",
+        "stat": "Average",
+        "period": 300,
+        "metrics": [
+          [ "AWS/RDS", "CPUUtilization", "DBClusterIdentifier", "example-prod-cluster", { "label": "DB CPU %" } ],
+          [ ".", "DatabaseConnections", ".", ".", { "label": "Connections", "yAxis": "right" } ]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 8,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "region": "us-east-1",
+        "title": "Billing - Example",
+        "view": "timeSeries",
+        "stat": "Maximum",
+        "period": 21600,
+        "metrics": [
+          [ "AWS/Billing", "EstimatedCharges", "Currency", "USD", { "region": "us-east-1", "label": "Estimated charges USD" } ]
+        ]
+      }
+    }
+  ]
+}
+

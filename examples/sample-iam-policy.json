@@ -1,0 +1,123 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "IdentityRead",
+      "Effect": "Allow",
+      "Action": [
+        "sts:GetCallerIdentity",
+        "iam:GetAccountSummary",
+        "iam:ListAccountAliases"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AwsDiscoveryReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "autoscaling:Describe*",
+        "cloudfront:List*",
+        "cloudwatch:Describe*",
+        "cloudwatch:Get*",
+        "cloudwatch:List*",
+        "dynamodb:Describe*",
+        "dynamodb:List*",
+        "ec2:Describe*",
+        "ecs:Describe*",
+        "ecs:List*",
+        "eks:Describe*",
+        "eks:List*",
+        "elasticache:Describe*",
+        "elasticache:List*",
+        "elasticfilesystem:Describe*",
+        "elasticloadbalancing:Describe*",
+        "es:Describe*",
+        "es:List*",
+        "lambda:Get*",
+        "lambda:List*",
+        "logs:Describe*",
+        "logs:FilterLogEvents",
+        "rds:Describe*",
+        "rds:ListTagsForResource",
+        "route53:Get*",
+        "route53:List*",
+        "s3:GetBucketLocation",
+        "s3:GetBucketTagging",
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
+        "sns:Get*",
+        "sns:List*",
+        "sqs:GetQueueAttributes",
+        "sqs:ListQueues",
+        "ssm:DescribeInstanceInformation",
+        "tag:GetResources"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ApiGatewayDiscoveryReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:GET",
+        "apigatewayv2:GetApis",
+        "apigatewayv2:GetStages",
+        "apigatewayv2:GetRoutes"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BudgetsReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "budgets:DescribeBudget",
+        "budgets:DescribeBudgets",
+        "budgets:DescribeNotificationsForBudget",
+        "budgets:ViewBudget"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchDashboardAndAlarmWrite",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:DeleteAlarms",
+        "cloudwatch:DeleteDashboards",
+        "cloudwatch:DisableAlarmActions",
+        "cloudwatch:EnableAlarmActions",
+        "cloudwatch:PutDashboard",
+        "cloudwatch:PutMetricAlarm",
+        "cloudwatch:TagResource",
+        "cloudwatch:UntagResource"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SnsNotificationWrite",
+      "Effect": "Allow",
+      "Action": [
+        "sns:CreateTopic",
+        "sns:DeleteTopic",
+        "sns:GetTopicAttributes",
+        "sns:ListSubscriptionsByTopic",
+        "sns:SetTopicAttributes",
+        "sns:Subscribe",
+        "sns:TagResource",
+        "sns:UntagResource",
+        "sns:Unsubscribe"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchLogsRetentionWrite",
+      "Effect": "Allow",
+      "Action": [
+        "logs:DeleteRetentionPolicy",
+        "logs:PutRetentionPolicy",
+        "logs:TagResource",
+        "logs:UntagResource"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
